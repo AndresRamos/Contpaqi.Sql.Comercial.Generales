@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+	  <id>$id$</id>
+	  <version>$version$</version>
+	  <title>$title$</title>
+	  <authors>$author$</authors>
+	  <owners>$author$</owners>
+	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	  <license type="expression">MIT</license>
+	  <projectUrl>https://github.com/AndresRamos/Contpaqi.Sql.Comercial.Generales</projectUrl>
+	  <repository type="git" url="https://github.com/AndresRamos/Contpaqi.Sql.Comercial.Generales"/>
+	  <description>$description$</description>
+	  <releaseNotes>Se actualizo el modelo de datos de la base de datos generales de CONTPAQi Comercial version 6.0.2</releaseNotes>
+	  <copyright>$copyright$</copyright>
+	  <tags>Contpaqi SQL Comercial</tags>
+  </metadata>
+</package>
