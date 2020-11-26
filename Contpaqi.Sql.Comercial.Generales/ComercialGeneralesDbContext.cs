@@ -52,6 +52,7 @@ namespace Contpaqi.Sql.Comercial.Generales
         public virtual DbSet<Formulas> Formulas { get; set; }
         public virtual DbSet<IdxAdminPAQ> IdxAdminPAQ { get; set; }
         public virtual DbSet<ModelosFinancieros> ModelosFinancieros { get; set; }
+        public virtual DbSet<nubeEmpresas> nubeEmpresas { get; set; }
         public virtual DbSet<SATBancos> SATBancos { get; set; }
         public virtual DbSet<SATClaveProdServ> SATClaveProdServ { get; set; }
         public virtual DbSet<SATFracciones> SATFracciones { get; set; }
@@ -344,6 +345,26 @@ namespace Contpaqi.Sql.Comercial.Generales
 
             modelBuilder.Entity<ModelosFinancieros>()
                 .Property(e => e.CRUTA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nubeEmpresas>()
+                .Property(e => e.CIDEMPRESA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nubeEmpresas>()
+                .Property(e => e.CEMPRESA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nubeEmpresas>()
+                .Property(e => e.CRFC)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nubeEmpresas>()
+                .Property(e => e.CTIPO)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<nubeEmpresas>()
+                .Property(e => e.CPROPIETARIO)
                 .IsUnicode(false);
 
             modelBuilder.Entity<SATBancos>()

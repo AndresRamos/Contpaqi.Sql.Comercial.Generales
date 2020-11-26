@@ -13,5 +13,7 @@ namespace Contpaqi.Sql.Comercial.Generales
         [Required]
         [StringLength(152)]
         public string CDESCRIPCION { get; set; }
+
+        public int CESTATUS { get; set; }
     }
 }

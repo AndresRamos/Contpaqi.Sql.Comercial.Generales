@@ -14,10 +14,7 @@ namespace Contpaqi.Sql.Comercial.Generales.Factories
                 throw new ArgumentNullException(nameof(contpaqiConnectionString));
             }
 
-            var connectionStringBuilder = new SqlConnectionStringBuilder(contpaqiConnectionString)
-            {
-                InitialCatalog = NombreBaseDatos
-            };
+            var connectionStringBuilder = new SqlConnectionStringBuilder(contpaqiConnectionString) {InitialCatalog = NombreBaseDatos};
 
             return new ComercialGeneralesDbContext(new SqlConnection(connectionStringBuilder.ToString()), true);
         }
