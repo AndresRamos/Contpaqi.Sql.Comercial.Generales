@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class Formulas
+    public partial class Formulas
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

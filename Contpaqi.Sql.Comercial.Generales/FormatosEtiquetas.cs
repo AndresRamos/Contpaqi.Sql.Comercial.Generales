@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class FormatosEtiquetas
+    public partial class FormatosEtiquetas
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class SATUnidades
+    public partial class SATUnidades
     {
         [Key]
         [StringLength(3)]

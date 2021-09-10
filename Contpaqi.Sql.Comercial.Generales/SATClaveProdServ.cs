@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Contpaqi.Sql.Comercial.Generales
 {
     [Table("SATClaveProdServ")]
-    public class SATClaveProdServ
+    public partial class SATClaveProdServ
     {
         [Key]
         [StringLength(10)]

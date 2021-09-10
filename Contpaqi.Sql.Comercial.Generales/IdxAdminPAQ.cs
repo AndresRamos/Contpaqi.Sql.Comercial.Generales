@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Contpaqi.Sql.Comercial.Generales
 {
     [Table("IdxAdminPAQ")]
-    public class IdxAdminPAQ
+    public partial class IdxAdminPAQ
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CIDAUTOINCSQL { get; set; }

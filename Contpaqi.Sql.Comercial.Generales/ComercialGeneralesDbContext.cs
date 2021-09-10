@@ -5,7 +5,7 @@ using System.Data.Entity.Infrastructure;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class ComercialGeneralesDbContext : DbContext
+    public partial class ComercialGeneralesDbContext : DbContext
     {
         public ComercialGeneralesDbContext()
         {
@@ -45,12 +45,15 @@ namespace Contpaqi.Sql.Comercial.Generales
         public virtual DbSet<CAC0000C> CAC0000C { get; set; }
         public virtual DbSet<CAC0000I> CAC0000I { get; set; }
         public virtual DbSet<CACIdiom> CACIdiom { get; set; }
+        public virtual DbSet<ControlProcesos> ControlProcesos { get; set; }
         public virtual DbSet<Empresas> Empresas { get; set; }
         public virtual DbSet<EmpresasModelo> EmpresasModelo { get; set; }
         public virtual DbSet<Etiquetas> Etiquetas { get; set; }
         public virtual DbSet<FormatosEtiquetas> FormatosEtiquetas { get; set; }
         public virtual DbSet<Formulas> Formulas { get; set; }
         public virtual DbSet<IdxAdminPAQ> IdxAdminPAQ { get; set; }
+        public virtual DbSet<MantenimientoBDDErrores> MantenimientoBDDErrores { get; set; }
+        public virtual DbSet<MantenimientoBDDProcesos> MantenimientoBDDProcesos { get; set; }
         public virtual DbSet<ModelosFinancieros> ModelosFinancieros { get; set; }
         public virtual DbSet<nubeEmpresas> nubeEmpresas { get; set; }
         public virtual DbSet<SATBancos> SATBancos { get; set; }
@@ -60,6 +63,8 @@ namespace Contpaqi.Sql.Comercial.Generales
         public virtual DbSet<SATUnidades> SATUnidades { get; set; }
         public virtual DbSet<UsuariosActivos> UsuariosActivos { get; set; }
         public virtual DbSet<UsuariosActivosBloqueos> UsuariosActivosBloqueos { get; set; }
+        public virtual DbSet<MantenimientoBDDIndexTmps> MantenimientoBDDIndexTmps { get; set; }
+        public virtual DbSet<ParametrosInicialesMto> ParametrosInicialesMto { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -161,6 +166,22 @@ namespace Contpaqi.Sql.Comercial.Generales
 
             modelBuilder.Entity<CACIdiom>()
                 .Property(e => e.ARCHAYUDA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ControlProcesos>()
+                .Property(e => e.cGuidControl)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ControlProcesos>()
+                .Property(e => e.cProcesoDescripcion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ControlProcesos>()
+                .Property(e => e.cNombreLog)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ControlProcesos>()
+                .Property(e => e.cEstatusProceso)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Empresas>()
@@ -339,6 +360,22 @@ namespace Contpaqi.Sql.Comercial.Generales
                 .Property(e => e.DESCRIPCIO)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<MantenimientoBDDErrores>()
+                .Property(e => e.cGuidProceso)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MantenimientoBDDErrores>()
+                .Property(e => e.cAliasBDD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MantenimientoBDDErrores>()
+                .Property(e => e.cDescripcionError)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MantenimientoBDDProcesos>()
+                .Property(e => e.cGuidProceso)
+                .IsUnicode(false);
+
             modelBuilder.Entity<ModelosFinancieros>()
                 .Property(e => e.CDESCRIPCION)
                 .IsUnicode(false);
@@ -437,6 +474,18 @@ namespace Contpaqi.Sql.Comercial.Generales
 
             modelBuilder.Entity<UsuariosActivosBloqueos>()
                 .Property(e => e.CEMPRESA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MantenimientoBDDIndexTmps>()
+                .Property(e => e.cNombreTabla)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MantenimientoBDDIndexTmps>()
+                .Property(e => e.cNombreIndex)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ParametrosInicialesMto>()
+                .Property(e => e.cDBTemplate)
                 .IsUnicode(false);
         }
     }

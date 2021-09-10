@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Contpaqi.Sql.Comercial.Generales
 {
     [Table("CACIdiom")]
-    public class CACIdiom
+    public partial class CACIdiom
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CIDAUTOINCSQL { get; set; }

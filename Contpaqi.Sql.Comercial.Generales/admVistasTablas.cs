@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class admVistasTablas
+    public partial class admVistasTablas
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CIDAUTOINCSQL { get; set; }

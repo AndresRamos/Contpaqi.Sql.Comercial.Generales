@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class CAC0000I
+    public partial class CAC0000I
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CIDAUTOINCSQL { get; set; }

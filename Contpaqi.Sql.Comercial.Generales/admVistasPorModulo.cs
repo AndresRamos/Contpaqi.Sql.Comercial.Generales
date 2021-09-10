@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Contpaqi.Sql.Comercial.Generales
 {
     [Table("admVistasPorModulo")]
-    public class admVistasPorModulo
+    public partial class admVistasPorModulo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CIDAUTOINCSQL { get; set; }

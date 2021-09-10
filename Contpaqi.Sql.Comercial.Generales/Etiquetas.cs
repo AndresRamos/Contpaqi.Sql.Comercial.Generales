@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class Etiquetas
+    public partial class Etiquetas
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

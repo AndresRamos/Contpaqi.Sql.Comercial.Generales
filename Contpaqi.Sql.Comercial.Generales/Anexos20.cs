@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class Anexos20
+    public partial class Anexos20
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

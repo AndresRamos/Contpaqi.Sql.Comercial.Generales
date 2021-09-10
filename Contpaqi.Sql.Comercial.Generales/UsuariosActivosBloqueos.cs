@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Contpaqi.Sql.Comercial.Generales
 {
-    public class UsuariosActivosBloqueos
+    public partial class UsuariosActivosBloqueos
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
